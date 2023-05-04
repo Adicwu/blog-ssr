@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": ["vite/client"],
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@root/*": ["/*"],
+      "@comps/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"],
+      "@lays/*": ["src/layouts/*"],
+      "@imgs/*": ["src/images/*"]
+    }
+  },
+  "extends": "astro/tsconfigs/base",
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
+  "exclude": ["node_modules"]
+}

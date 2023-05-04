@@ -1,0 +1,32 @@
+{
+  "extends": ["plugin:astro/recommended", "plugin:vue/vue3-recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      }
+    },
+    {
+      "files": ["*.ts"],
+      "parser": "@typescript-eslint/parser",
+      "rules": {}
+    },
+    {
+      "files": ["*.tsx"],
+      "parser": "vue-eslint-parser",
+      "rules": {
+        "vue/multi-word-component-names": "off"
+      }
+    }
+  ]
+}
